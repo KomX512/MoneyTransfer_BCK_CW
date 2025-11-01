@@ -52,5 +52,11 @@ c указанным ID перевода
     A-->E["service"];
     A-->F(["MoneyTransferServiceApplication.java"])
     B-->J(["TransferController.java"])
-      
+    C-->H(["LogginService.java"]) 
+    D-->I(["Amount.java"]) 
+    D-->F(["ConfirmRequest.java"]) 
+    D-->K(["ErrorResponse.java"])
+    D-->L(["TransferRequest.java"])
+    D-->M(["TransferResponse.java"])
+    E-->N(["TransferService.java"])
 ```
