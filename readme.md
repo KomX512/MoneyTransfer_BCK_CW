@@ -54,7 +54,7 @@ c указанным ID перевода
     B-->J(["TransferController.java"])
     C-->H(["LogginService.java"]) 
     D-->I(["Amount.java"]) 
-    D-->F(["ConfirmRequest.java"]) 
+    D-->O(["ConfirmRequest.java"]) 
     D-->K(["ErrorResponse.java"])
     D-->L(["TransferRequest.java"])
     D-->M(["TransferResponse.java"])
