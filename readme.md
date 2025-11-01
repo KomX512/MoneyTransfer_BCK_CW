@@ -45,11 +45,12 @@ c указанным ID перевода
 
 ```mermaid
   graph TD;
-      main.grp-->controller;
-      main.grp-->logger;
-      main.grp-->model;
-      main.grp-->service;
-      main.grp-->MoneyTransferServiceApplication.java
-      controller-->TransferController.java
+    A["main.grp"] 
+    A-->B["controller"];
+    A-->C["logger"];
+    A-->D["model"];
+    A-->E["service"];
+    A-->F(["MoneyTransferServiceApplication.java"])
+    B-->J(["TransferController.java"])
       
 ```
