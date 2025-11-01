@@ -1,7 +1,8 @@
 package main.grp.model;
 
-import javax.validation.constraints.*;
-
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public class Amount {
@@ -11,17 +12,29 @@ public class Amount {
     @NotNull(message = "Нужно заполнить")
     @DecimalMin(value = "0.01", message = "Сумма не указана не верно!")
     private BigDecimal value;
+
     // Constructors, getters and setters
-    public Amount() {}
+    public Amount() {
+    }
 
     public Amount(BigDecimal value, String currency) {
         this.value = value;
         this.currency = currency;
     }
 
-    public BigDecimal getValue() { return value; }
-    public void setValue(BigDecimal value) { this.value = value; }
+    public BigDecimal getValue() {
+        return value;
+    }
 
-    public String getCurrency() { return currency; }
-    public void setCurrency(String currency) { this.currency = currency; }
+    public void setValue(BigDecimal value) {
+        this.value = value;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 }

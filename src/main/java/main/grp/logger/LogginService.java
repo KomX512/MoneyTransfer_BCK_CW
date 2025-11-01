@@ -1,6 +1,7 @@
 package main.grp.logger;
 
 import org.springframework.stereotype.Service;
+
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -43,7 +44,7 @@ public class LogginService {
             return cardNumber;
         }
         return cardNumber.substring(0, 4) + "****" + cardNumber.substring(cardNumber.length() - 4);
-    }
+    } // Можно записывать и полный номер карты... Но у нас же тут банк и деньги...
 
     private synchronized void writeToFile(String logEntry) {
         try {

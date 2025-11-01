@@ -1,7 +1,10 @@
 package main.grp.controller;
 
 import jakarta.validation.Valid;
-import main.grp.model.*;
+import main.grp.model.ConfirmRequest;
+import main.grp.model.ErrorResponse;
+import main.grp.model.TransferRequest;
+import main.grp.model.TransferResponse;
 import main.grp.service.TransferService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +36,7 @@ public class TransferController {
     @GetMapping("/")
     public ResponseEntity<String> sayHi() {
         return ResponseEntity.ok("ON-LINE " + LocalDateTime.now());
-   }
+    }
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorResponse> handleRuntimeException(RuntimeException e) {
