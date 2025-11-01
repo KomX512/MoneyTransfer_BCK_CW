@@ -41,4 +41,15 @@ c указанным ID перевода
 Операция прошла
 ![alt Успешно](https://github.com/KomX512/MoneyTransfer_BCK_CW/blob/main/pics/web_sucsses.png?raw=true)
 
+# Схема проекта
 
+```mermaid
+  graph TD;
+      main.grp-->controller;
+      main.grp-->logger;
+      main.grp-->model;
+      main.grp-->service;
+      main.grp-->MoneyTransferServiceApplication.java
+      controller-->TransferController.java
+      
+```
