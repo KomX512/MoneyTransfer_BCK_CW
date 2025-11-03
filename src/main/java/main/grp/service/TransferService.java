@@ -99,11 +99,7 @@ public class TransferService {
 
     private void processTransfer(TransferRequest request) {
         // Типа что-то делаем усиленно...
-        try {
-            Thread.sleep(100); // Это всё баловство...
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new RuntimeException("Transfer interrupted", e);
-        }
+
+        //Сюда обработка платежа
     }
 }

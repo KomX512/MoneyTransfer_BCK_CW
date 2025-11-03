@@ -38,15 +38,4 @@ public class TransferController {
         return ResponseEntity.ok("ON-LINE " + LocalDateTime.now());
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorResponse> handleRuntimeException(RuntimeException e) {
-        ErrorResponse error = new ErrorResponse(e.getMessage(), 500);
-        return ResponseEntity.badRequest().body(error);
-    }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleException(Exception e) {
-        ErrorResponse error = new ErrorResponse("Internal server error", 500);
-        return ResponseEntity.internalServerError().body(error);
-    }
 }
